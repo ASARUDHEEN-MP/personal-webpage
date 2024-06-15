@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>DevFolio Bootstrap Template</title>
+  <title>Asarudheen portfolio </title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
   <!-- Favicons -->
   
+  <link href="img/a logo.jpg" rel="icon">
+  <!-- If you have a specific image for Apple devices -->
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Bootstrap CSS File -->
@@ -411,9 +413,10 @@
                     </h5>
                   </div>
                   <div>
-                    <form name="contactForm" onsubmit="return validateForm()"   method="post" id="formid">
+                    <form name="contactForm" action="https://api.web3forms.com/submit" method="POST" id="formid">
              
-            
+                      <input type="hidden" name="access_key" value="e39f7718-ac4a-41ed-bab8-af16490bfd2f">
+
                       <div class="row">
                           <label>Full Name</label>
                           <input type="text" class="form-control" name="name">
@@ -461,8 +464,8 @@
                   </div>
                   <div class="socials">
                     <ul>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                      <li><a href="https://www.instagram.com/a.sru___/?igshid=YmMyMTA2M2Y%3D" target="_blank"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                      <li><a href="https://www.facebook.com/asru.ashraf.3998/"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
+                      <li><a href="https://www.instagram.com/asrooo0/" target="_blank"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
                      
                     </ul>
                   </div>
@@ -503,94 +506,96 @@
     }
     
     // Defining a function to validate form 
-    function validateForm() {
-        // Retrieving the values of form elements 
-        var name = document.contactForm.name.value;
-        var email = document.contactForm.email.value;
-        var mobile = document.contactForm.mobile.value;
-        var message = document.contactForm.message.value;
+  //   function validateForm() {
+  //       console.log("yes its here")
+  //       // Retrieving the values of form elements 
+  //       var name = document.contactForm.name.value;
+  //       var email = document.contactForm.email.value;
+  //       var mobile = document.contactForm.mobile.value;
+  //       var message = document.contactForm.message.value;
         
     
         
-      // Defining error variables with a default value
-        var nameErr = emailErr = mobileErr = messageErr = true;
+  //     // Defining error variables with a default value
+  //       var nameErr = emailErr = mobileErr = messageErr = true;
         
-        // Validate name
-        if(name == "") {
-            printError("nameErr", "Please enter your name");
-        } else {
-            var regex = /^[a-zA-Z\s]+$/;                
-            if(regex.test(name) === false) {
-                printError("nameErr", "Please enter a valid name");
-            } else {
-                printError("nameErr", "");
-                nameErr = false;
-            }
-        }
+  //       // Validate name
+  //       if(name == "") {
+  //           printError("nameErr", "Please enter your name");
+  //       } else {
+  //           var regex = /^[a-zA-Z\s]+$/;                
+  //           if(regex.test(name) === false) {
+  //               printError("nameErr", "Please enter a valid name");
+  //           } else {
+  //               printError("nameErr", "");
+  //               nameErr = false;
+  //           }
+  //       }
         
-        // Validate email address
-        if(email == "") {
-            printError("emailErr", "Please enter your email address");
-        } else {
-            // Regular expression for basic email validation
-            var regex = /^\S+@\S+\.\S+$/;
-            if(regex.test(email) === false) {
-                printError("emailErr", "Please enter a valid email address");
-            } else{
-                printError("emailErr", "");
-                emailErr = false;
-            }
-        }
+  //       // Validate email address
+  //       if(email == "") {
+  //           printError("emailErr", "Please enter your email address");
+  //       } else {
+  //           // Regular expression for basic email validation
+  //           var regex = /^\S+@\S+\.\S+$/;
+  //           if(regex.test(email) === false) {
+  //               printError("emailErr", "Please enter a valid email address");
+  //           } else{
+  //               printError("emailErr", "");
+  //               emailErr = false;
+  //           }
+  //       }
         
-        // Validate mobile number
-        if(mobile == "") {
-            printError("mobileErr", "Please enter your mobile number");
-        } else {
-            var regex = /^[1-9]\d{9}$/;
-            if(regex.test(mobile) === false) {
-                printError("mobileErr", "Please enter a valid 10 digit mobile number");
+  //       // Validate mobile number
+  //       if(mobile == "") {
+  //           printError("mobileErr", "Please enter your mobile number");
+  //       } else {
+  //           var regex = /^[1-9]\d{9}$/;
+  //           if(regex.test(mobile) === false) {
+  //               printError("mobileErr", "Please enter a valid 10 digit mobile number");
   
-  } else{
-                printError("mobileErr", "");
-                mobileErr = false;
-            }
-        }
+  // } else{
+  //               printError("mobileErr", "");
+  //               mobileErr = false;
+  //           }
+  //       }
         
-        // Validate message
+  //       // Validate message
   
-        if(message == "") {
-        printError("messageErr", "Please enter the message");
-      }else{
-        printError("messageErr", "");
-        messageErr = false;
-      }
+  //       if(message == "") {
+  //       printError("messageErr", "Please enter the message");
+  //     }else{
+  //       printError("messageErr", "");
+  //       messageErr = false;
+  //     }
         
-        // Validate gender
+  //       // Validate gender
     
         
-        // Prevent the form from being submitted if there are any errors
-        if((nameErr || emailErr || mobileErr || messageErr) != true) {
-        var form = document.getElementById('formid');
-        var xhr = new XMLHttpRequest();
-        var data = new FormData(form);
-        console.log(data);
+  //       // Prevent the form from being submitted if there are any errors
+  //       if((nameErr || emailErr || mobileErr || messageErr) != true) {
+  //       var form = document.getElementById('formid');
+  //       console.log(form,"here is form")
+  //       var xhr = new XMLHttpRequest();
+  //       var data = new FormData(form);
+  //       console.log(data);
         
-        xhr.open('POST','https://script.google.com/macros/s/AKfycbygqMfR8a1BAK2mtFyKQre27VdZtcOT7Xwb1BNoCP1hf3IXNdD6ynwluuQvmmQFxjyW/exec')
+  //       xhr.open('POST','https://script.google.com/macros/s/AKfycbygqMfR8a1BAK2mtFyKQre27VdZtcOT7Xwb1BNoCP1hf3IXNdD6ynwluuQvmmQFxjyW/exec')
   
-        xhr.send(data);
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState == XMLHttpRequest.DONE) {
+  //       xhr.send(data);
+  //       xhr.onreadystatechange = function() {
+  //         if (xhr.readyState == XMLHttpRequest.DONE) {
      
             
-          }
-        }
-        //Dont submit the form.
-        return false; 
-      }else{
-      console.log('error');
-        return false;
-      }
-    };
+  //         }
+  //       }
+  //       //Dont submit the form.
+  //       return false; 
+  //     }else{
+  //     console.log('error');
+  //       return false;
+  //     }
+  //   };
   
     
    
